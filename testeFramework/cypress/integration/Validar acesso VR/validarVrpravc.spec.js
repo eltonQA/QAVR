@@ -10,6 +10,13 @@ context('Acessar VR', () => {
 
 it('clicar na seção PraVoce', () =>{
   cy.get(':nth-child(3) > .vr-quick-navigation__link').click()
+  cy.location('pathname').should('eq', '/onde-aceita.htm')
+  cy.get('.vr-button--negative').click()
+  cy.get('#mapSection > div > div')
+  //cy.get('#totalm').contains('Total:');
+  cy.get('[class="vr-section vr-section-map"]').should('be.visible');
+  //cy.location(search).should('mapSection')
+  //cy.get('//*[@id="mapSection"]')
 
 })
   
